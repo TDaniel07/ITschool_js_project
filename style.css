@@ -57,3 +57,111 @@ main {
 header {
   height: 30vh;
 }
+
+.col1{
+  margin-left: -25px;
+}
+
+.col1-elements{
+  list-style-type: none;
+}
+
+.col1-elements li{
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.temperature{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.col2-elements{
+  list-style-type: none;
+  padding-bottom: 5px;
+}
+
+.current-weather{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.real-feel{
+  font-size: 1.25rem;
+}
+
+.sky{
+  font-size: 1.25rem;
+}
+
+.wind{
+  font-size: 1.25rem;
+}
+
+.city-name strong{
+  font-size: 2rem;
+}
+
+.city-name{
+  margin-bottom: 7px;
+}
+
+.date-and-time strong{
+  font-size: 1.5rem;
+}
+
+.date-and-time p{
+  margin-left: 10px;
+}
+
+.temperature strong{
+  font-size: 2.5rem;
+}
+
+.real-feel strong{
+  font-size: 1.25rem;
+}
+
+.date-and-time{
+  margin-bottom: -15px;
+}
+
+.col2-elements li{
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.col2{
+  margin-left: -20px;
+}
+
+.weather-forecast-card-container{
+ width: 100%;
+ max-width: 1500px;
+ border: 1px solid #dee2e6;
+ border-radius: 0.25rem;
+ padding: 20px;
+ margin-bottom: 20px;
+}
+
+.weather-forecast-day strong{
+  color: #101d42;
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+.weather-forecast-card{
+  width: 100%;
+  max-width: 1130px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-forecast-card-temperature strong{
+  font-size: 1.75rem;
+}

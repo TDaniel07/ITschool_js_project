@@ -35,7 +35,7 @@
             apoi scrollează pentru a vedea vremea din orașul tău.
           </p>
           <p class="text-center fs-5">
-            Orașul tău curent este <strong>București.</strong>
+            Orașul tău curent este <strong class = "city-name">București</strong>.
           </p>
           <div class="dropdown d-flex justify-content-center">
             <button
@@ -62,13 +62,39 @@
       <section class="py-5 bg-secondary">
         <div class="container">
           <h2 class="text-primary text-center mb-5">Vremea curentă</h2>
-          <div class="current-weather"></div>
+          <div class="current-weather">
+            <div class = "col1">
+              <ul class = "col1-elements">
+                <li class = "city-name"><strong></strong></li>
+                <li class = "date-and-time"><strong></strong>,<p></p></li>
+                <li class = "temperature"><strong></strong><img></li>
+              </ul>
+            </div>
+            <div class = "col2">
+              <ul class = "col2-elements">
+                <li class = "real-feel">Real feel: <strong></strong></li>
+                <li class = "sky"></li>
+                <li class = "wind">Vânt: <strong></strong></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       <section class="py-5">
         <div class="container">
           <h2 class="text-primary text-center mb-5">Prognoză pe 5 zile</h2>
-          <div class="weather-forecast"></div>
+          <div class="weather-forecast">
+            <p class = "weather-forecast-day"><strong>Marti</strong></p>
+            <div class = "weather-forecast-card-container">
+              <div class = "weather-forecast-card">
+                <p class = "weather-forecast-card-time">18:00</p>
+                <img src = "http://openweathermap.org/img/wn/03d@2x.png" class = "weather-forecast-card-img">
+                <p class = "weather-forecast-card-temperature"><strong>28°C</strong></p>
+                <p class = "weather-forecast-card-sky">nori împrăștiați</p>
+                <p class = "weather-forecast-real-feel">Real feel: <strong>27°C</strong></p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -88,7 +114,9 @@
     <script type="text/javascript" src="./utils/date.js"></script>
     <script type="text/javascript" src="./utils/Weather.js"></script>
     <script type="text/javascript" src="./api/endpoints.js"></script>
+    <script type="text/javascript" src="./sections/CurrentForecast.js"></script>
     <script type="text/javascript" src="./sections/CurrentWeather.js"></script>
+    <script type="text/javascript" src="./sections/ChooseLocation.js"></script>
     <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
