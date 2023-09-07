@@ -1,4 +1,3 @@
-var apiKey = "ef04b61f3ad1b2e2026061124be1d7ac";
 var language = 'ro';
 
 function getCurrentWeatherDataUrl(city)
