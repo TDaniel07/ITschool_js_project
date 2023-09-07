@@ -74,11 +74,6 @@ function populateDOMForecast(forecast, cnt)
         weatherCard.append(weatherCardSky);
         weatherCard.append(weatherCardRealFeel);
         weatherCardContainer.append(weatherCard);
-        weatherForecast.append(weatherCardContainer);
-        console.log(weatherCardContainer);
-
-        
+        weatherForecast.append(weatherCardContainer);        
     }
-    
-
 }

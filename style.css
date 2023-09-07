@@ -165,3 +165,34 @@ header {
 .weather-forecast-card-temperature strong{
   font-size: 1.75rem;
 }
+
+.scroll-to-top-button{
+  position: sticky;
+  bottom: 15px;
+  left: 100%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #101d42;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.scroll-to-top-button-show{
+  display: flex;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#up-arrow{
+  color: white;
+}
