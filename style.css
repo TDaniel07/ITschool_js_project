@@ -153,15 +153,6 @@ header {
   font-size: 1.75rem;
 }
 
-.weather-forecast-card{
-  width: 100%;
-  max-width: 1130px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .weather-forecast-card-temperature strong{
   font-size: 1.75rem;
 }
@@ -195,4 +186,10 @@ header {
 
 #up-arrow{
   color: white;
+}
+
+.row div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

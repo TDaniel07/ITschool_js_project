@@ -1,7 +1,7 @@
 const currentCityTag = document.querySelector(".city-name");
 let currentCity = localStorage.getItem("city");
 
-if(!currentCity){
+if(currentCity == undefined){
     localStorage.setItem("city", "București")
 }
 

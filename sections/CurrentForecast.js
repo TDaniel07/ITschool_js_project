@@ -15,14 +15,11 @@ function displayCurrentForecast(city)
 function populateDOMForecast(forecast, cnt)
 {
     const weatherForecast = document.querySelector(".weather-forecast");
-    const weatherDay = document.createElement("p");
 
     weatherForecast.innerHTML = "";
 
     var currentDay = getDayOfTheWeek(forecast[0].dt);
-    weatherDay.classList.add("weather-forecast-day");
-    weatherDay.innerHTML = `<strong>${currentDay}</strong>`;
-    weatherForecast.append(weatherDay);
+    weatherForecast.innerHTML += `<h3 class = "weather-forecast-day">${currentDay}</h3>`;
 
     for(var i = 0; i < cnt; ++i)
     {
@@ -35,45 +32,30 @@ function populateDOMForecast(forecast, cnt)
         if(getDayOfTheWeek(forecast[i].dt) != currentDay)
         {
             currentDay = getDayOfTheWeek(forecast[i].dt);
-            const weatherDay = document.createElement("p");
-            weatherDay.classList.add("weather-forecast-day");
-            weatherDay.innerHTML = `<strong>${currentDay}</strong>`;
-            weatherForecast.append(weatherDay);
+            weatherForecast.innerHTML += `<h3 class = "weather-forecast-day">${currentDay}</h3>`;
         }
-
-        const weatherCardContainer = document.createElement("div");
-        const weatherCard = document.createElement("div");
-        const weatherCardTime = document.createElement("p");
-        const weatherCardImg = document.createElement("img");
-        const weatherCardTemperature = document.createElement("p");
-        const weatherCardSky = document.createElement("p");
-        const weatherCardRealFeel = document.createElement("p");
-        const strongTemp = document.createElement("strong");
-        const strongRealFeel = document.createElement("strong");
-
-        weatherCardContainer.classList.add("weather-forecast-card-container");
-        weatherCard.classList.add("weather-forecast-card");
-        weatherCardTime.classList.add("weather-forecast-card-time");
-        weatherCardImg.classList.add("weather-forecast-card-img");
-        weatherCardTemperature.classList.add("weather-forecast-card-temperature");
-        weatherCardSky.classList.add("weather-forecast-card-sky");
-        weatherCardRealFeel.classList.add("weather-forecast-real-feel");
-
-        weatherCardTime.innerText = `${timeData}`;
-        weatherCardImg.setAttribute("src", iconData);
-        strongTemp.innerText = `${weatherData}`
-        weatherCardTemperature.append(strongTemp);
-        weatherCardSky.innerText = `${skyData}`
-        weatherCardRealFeel.innerText = "Real feel: ";
-        weatherCardRealFeel.append(strongRealFeel);
-        strongRealFeel.innerText = `${realFeelData}`;
-        
-        weatherCard.append(weatherCardTime);
-        weatherCard.append(weatherCardImg);
-        weatherCard.append(weatherCardTemperature);
-        weatherCard.append(weatherCardSky);
-        weatherCard.append(weatherCardRealFeel);
-        weatherCardContainer.append(weatherCard);
-        weatherForecast.append(weatherCardContainer);        
+        console.log("salut");
+        weatherForecast.innerHTML += `
+        <div class = "weather-forecast-card-container">
+            <div class = "weather-forecast-card container">
+                <div class = "row justify-content-between">
+                    <div class = "col">
+                        <p class = "weather-forecast-card-time">${timeData}</p>
+                    </div>
+                    <div class = "col">
+                        <img src = "${iconData}" class = "weather-forecast-card-img">
+                    </div>
+                    <div class = "col">
+                        <p class = "weather-forecast-card-temperature"><strong>${weatherData}°C</strong></p>
+                    </div>
+                    <div class = "col">
+                        <p class = "weather-forecast-card-sky">${skyData}</p>
+                    </div>
+                    <div class = "col">
+                        <p class = "weather-forecast-real-feel">Real feel: <strong>${realFeelData}</strong></p>
+                    </div>
+                </div>
+            </div>
+      </div>`
     }
 }
