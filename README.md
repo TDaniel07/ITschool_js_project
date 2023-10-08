@@ -15,6 +15,6 @@ The site can show the 7 day weather forecast for the selected region
 
 ## Site link
 
-The link to the site is [here](itschool-weather-site.netlify.app)
+The link to the site is itschool-weather-site.netlify.app
 
 
